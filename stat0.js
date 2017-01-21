@@ -4,7 +4,7 @@
 var demo={};
 var centerX=1500/2;
 var centerY=1000/2;
-var samakty;
+var baty;
 var bg;
 var speed=6;
 demo.stat0=function(){};
@@ -15,7 +15,6 @@ preload:function(){
 create:function(){
     game.stage.backgroundColor='#000';
     addNumberEventListener();
-
 },
 update:function(){
 
@@ -24,6 +23,9 @@ update:function(){
 };
 
 function changeState(phaserVar,num) {
+    game.state.start('stat'+num);
+}
+function changeStateByMe(num) {
     game.state.start('stat'+num);
 }
 function addNumberEventListener(){
