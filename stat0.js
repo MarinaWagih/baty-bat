@@ -3,6 +3,7 @@
  */
 var bg;
 var speed=6;
+var time;
 demo.stat0=function(){};
 demo.stat0.prototype={
 preload:function(){

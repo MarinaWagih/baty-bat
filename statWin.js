@@ -1,8 +1,13 @@
 /**
- * Created by marina on 1/15/17.
+ * Created by marina on 1/22/17.
  */
-demo.statGameOver=function(){};
-demo.statGameOver.prototype={
+var time;
+var centerX=1920/2;
+var centerY=1080/2;
+var bg,speed;
+var character,logoName1,logoName2,lets_play;
+demo.statWin=function(){};
+demo.statWin.prototype= {
     preload: function () {
         game.load.image('bg', 'assets/Intro/bg.png');
         game.load.image('board', 'assets/sprites/board.png');
@@ -16,10 +21,8 @@ demo.statGameOver.prototype={
         game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
         bg = game.add.sprite(0, 0, 'bg');
         character = game.add.sprite(0,0, "board");
-
         var style = { font: "bold 70px Arial", fill: "#fff", boundsAlignH: "center", boundsAlignV: "middle" };
-        var txt = game.add.text(centerX-150, centerY , "Game Over",style );
-
+       var txt = game.add.text(centerX -150, centerY , "Score :" +score, style);
 
         lets_play = game.add.button(centerX-250, centerY + 315, "back_btn", function () {
             changeStateByMe(1);
@@ -29,5 +32,10 @@ demo.statGameOver.prototype={
         addNumberEventListener();
 
     },
-update:function(){}
+    update: function () {
+
+
+    }
 };
+
+
