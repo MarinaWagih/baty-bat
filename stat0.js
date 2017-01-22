@@ -1,10 +1,6 @@
 /**
  * Created by marina on 1/15/17.
  */
-var demo={};
-var centerX=1500/2;
-var centerY=1000/2;
-var baty;
 var bg;
 var speed=6;
 demo.stat0=function(){};
